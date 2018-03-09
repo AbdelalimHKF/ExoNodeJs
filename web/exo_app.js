@@ -12,7 +12,7 @@ function mainController($scope, $http) {
     function successCallback(response){
         //success code
         $scope.jeu = response.data;
-        console.log(response);
+        console.log("Data retrieved from the nodejs server",response);
     }
     function errorCallback(error){
     //error code
@@ -21,12 +21,10 @@ function mainController($scope, $http) {
 
     $scope.oui= function(){
         $scope.response=$scope.jeu.goodResp;
-        $scope.visible=!$scope.visible;
     }
 
     $scope.non= function(){
         $scope.response=$scope.jeu.badResp;
-        $scope.visible=!$scope.visible;
     }
 
 }
