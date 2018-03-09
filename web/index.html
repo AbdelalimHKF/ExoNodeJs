@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="exo_app">
+<head>
+    <title>Exo app</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="angular.js"></script>
+<script src="exo_app.js"></script>
+</head>
+<body  ng-init="visible=false">
+    <div ng-controller="MainCtrl" >
+        
+        <div class="center " class="panel panel-body" >
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div >
+                        <h3>{{jeu.question}}</h3>
+                    </div>
+                    <div>
+                        <label> Oui :
+                            <input type="radio" name="aimer" ng-click="oui()"
+                            data-toggle="modal" data-target="#myModal">
+                        </label>
+                        <label> Non :
+                            <input type="radio" name="aimer" ng-click="non()"
+                            data-toggle="modal" data-target="#myModal">
+                    </label>
+                    </div>            
+                </div>
+            </div> 
+        </div>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Reponse</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p><strong>{{response}}</strong></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
