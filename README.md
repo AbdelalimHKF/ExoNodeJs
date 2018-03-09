@@ -3,9 +3,9 @@
 > web app 
 
 
-![Exoks Preview](.PNG)
+![Exoks Preview](prevQuest.PNG)
 
-![Exoks Preview](.PNG)
+![Exoks Preview](prevResp.PNG)
 
 
 ## Setup
